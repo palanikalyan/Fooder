@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 from PIL import Image
 
-genai.configure(api_key = st.secrets["API_KEY"])
+genai.configure(api_key = st.secrets["AIzaSyBzjYd_lcDJz6jzpNho54INTCT4psk58SU"])
 
 model = genai.GenerativeModel('gemini-pro-vision')
 def get_gemini_response(input,image):
@@ -14,7 +14,7 @@ def get_gemini_response(input,image):
 
 
 st.set_page_config(
-    page_title="ImageInsights",
+    page_title="Fooder",
     page_icon="🌟"
 )
 st.header("✨ Image Insights ✨")
@@ -36,10 +36,4 @@ if submit or input:
     st.subheader("The Response is")
     st.write(response)
 
-st.markdown("""
----
 
-*Built with ❤️ by Manisha Varshney*
-
-[![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/manisha-v/Image-Insights)
-""")
